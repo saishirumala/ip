@@ -1,0 +1,30 @@
+
+<html>
+<body>
+<h2>Hotel Room Booking</h2>
+
+Enter Name:
+<input id="name"><br><br>
+
+Select Room:
+<select id="room">
+  <option>Single Room</option>
+  <option>Double Room</option>
+</select><br><br>
+
+<button onclick="book()">Book Room</button>
+
+<p id="result"></p>
+
+<script>
+function book() {
+  let n = document.getElementById("name").value;
+  let r = document.getElementById("room").value;
+
+  document.getElementById("result").innerHTML =
+    "Room booked for " + n + ": " + r;
+}
+</script>
+
+</body>
+</html>
