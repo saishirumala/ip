@@ -1,0 +1,26 @@
+
+<html>
+<body>
+<h2>Library Management</h2>
+
+<input id="book" placeholder="Enter book name">
+<button onclick="search()">Search</button>
+
+<p id="result"></p>
+
+<script>
+function search() {
+  let b = document.getElementById("book").value;
+
+  if (b == "Java" || b == "Python") {
+    document.getElementById("result").innerHTML =
+      "Book Available";
+  } else {
+    document.getElementById("result").innerHTML =
+      "Book Not Available";
+  }
+}
+</script>
+
+</body>
+</html>
