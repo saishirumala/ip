@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ReNewMarket</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f0f8ff}
+.item{background:white;padding:15px;margin:10px;display:inline-block}
+button{padding:8px;background:green;color:white}
+</style>
+</head>
+<body>
+<h1>ReNewMarket</h1>
+<h3>Second-Hand Products</h3>
+
+<div class="item">
+<h3>Used Laptop</h3><p>₹12000</p>
+<button onclick="buy('Used Laptop')">Buy</button>
+</div>
+
+<div class="item">
+<h3>Study Table</h3><p>₹1500</p>
+<button onclick="buy('Study Table')">Buy</button>
+</div>
+
+<div class="item">
+<h3>Bicycle</h3><p>₹2500</p>
+<button onclick="buy('Bicycle')">Buy</button>
+</div>
+
+<p id="msg"></p>
+<script>
+function buy(item){
+document.getElementById("msg").innerText=
+"You selected: "+item;
+}
+</script>
+</body>
+</html>
