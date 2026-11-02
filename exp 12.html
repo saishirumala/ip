@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insurance System</title>
+<style>
+body{font-family:Arial;text-align:center;background:#eef2ff}
+form{background:white;padding:20px;margin:30px auto;width:300px}
+input,select,button{padding:10px;margin:8px;width:90%}
+</style>
+</head>
+<body>
+<h1>Insurance Management</h1>
+<form id="f">
+<input placeholder="Customer Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<select id="policy">
+<option>Life Insurance</option>
+<option>Health Insurance</option>
+<option>Vehicle Insurance</option>
+</select>
+<button>Register Policy</button>
+</form>
+<p id="msg"></p>
+
+<script>
+document.getElementById("f").onsubmit=function(e){
+e.preventDefault();
+document.getElementById("msg").innerText=
+"Policy registered: "+
+document.getElementById("policy").value;
+};
+</script>
+</body>
+</html>
