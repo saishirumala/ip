@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EasyToll</title>
+<style>
+body{font-family:Arial;text-align:center;background:#e0f7fa}
+form{background:white;padding:20px;margin:30px auto;width:300px}
+input,select,button{padding:10px;margin:8px;width:90%}
+</style>
+</head>
+<body>
+<h1>EasyToll Payment System</h1>
+
+<form id="f">
+<input id="name" placeholder="Vehicle Owner Name" required>
+<input id="vehicle" placeholder="Vehicle Number" required>
+<select id="type">
+<option value="50">Car - ₹50</option>
+<option value="100">Bus - ₹100</option>
+<option value="150">Truck - ₹150</option>
+</select>
+<button>Calculate Toll</button>
+</form>
+
+<h3 id="result"></h3>
+<button onclick="pay()">Pay Toll</button>
+<p id="msg"></p>
+
+<script>
+let amount=0;
+document.getElementById("f").onsubmit=function(e){
+e.preventDefault();
+amount=Number(document.getElementById("type").value);
+document.getElementById("result").innerText=
+"Toll Amount: ₹"+amount;
+};
+function pay(){
+if(amount>0){
+document.getElementById("msg").innerText=
+"Payment demonstration successful: ₹"+amount;
+}else{
+document.getElementById("msg").innerText=
+"Please calculate the toll amount first.";
+}
+}
+</script>
+</body>
+</html>
